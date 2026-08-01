@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;600;700&display=swap");
+
+:root {
+  --bg-primary: #000000;
+  --bg-surface: #0a0a0c;
+  --bg-surface-hover: #141418;
+  --bg-card: rgba(14, 14, 16, 0.88);
+
+  --accent-yellow: #ffc700;
+  --accent-yellow-bright: #ffe600;
+  --accent-orange: #ff4500;
+  --accent-amber: #ff9900;
+
+  --text-main: #ffffff;
+  --text-muted: #a1a1aa;
+  --text-dim: #71717a;
+
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --border-active: rgba(255, 199, 0, 0.5);
+
+  --font-main: "Outfit", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  --shadow-glow-yellow: none;
+  --shadow-glow-orange: none;
+}
+
+/* LIGHT THEME OVERRIDES */
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-hover: #f1f5f9;
+  --bg-card: rgba(255, 255, 255, 0.95);
+
+  --accent-yellow: #d97706;
+  --accent-yellow-bright: #f59e0b;
+  --accent-orange: #ea580c;
+  --accent-amber: #b45309;
+
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #64748b;
+
+  --border-subtle: rgba(0, 0, 0, 0.1);
+  --border-active: rgba(217, 119, 6, 0.5);
+
+  --shadow-glow-yellow: none;
+  --shadow-glow-orange: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-main);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Typography Helpers */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.text-yellow {
+  color: var(--accent-yellow);
+}
+
+.text-orange {
+  color: var(--accent-orange);
+}
+
+.text-gradient-yellow {
+  background: linear-gradient(
+    135deg,
+    var(--text-main) 0%,
+    var(--accent-yellow) 60%,
+    var(--accent-orange) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-orange {
+  background: linear-gradient(
+    135deg,
+    var(--accent-yellow) 0%,
+    var(--accent-orange) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism card - Clean neutral shadow */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.glass-panel:hover {
+  border-color: var(--border-active);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-yellow);
+}
+
+/* Keyframe Animations */
+@keyframes pulseREC {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-rec {
+  animation: pulseREC 2s infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 22s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+/* Buttons - Zero Colored Glow */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(
+    135deg,
+    var(--accent-yellow) 0%,
+    var(--accent-orange) 100%
+  );
+  color: #ffffff;
+  font-weight: 800;
+  font-family: var(--font-display);
+  padding: 14px 28px;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-surface);
+  color: var(--text-main);
+  font-weight: 700;
+  font-family: var(--font-display);
+  padding: 14px 28px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 199, 0, 0.1);
+  border-color: var(--accent-yellow);
+  color: var(--accent-yellow);
+  transform: translateY(-2px);
+}
+
+/* Badge Styles */
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: rgba(255, 199, 0, 0.12);
+  color: var(--accent-yellow);
+  border: 1px solid rgba(255, 199, 0, 0.3);
+}
+
+.badge-orange {
+  background: rgba(255, 69, 0, 0.12);
+  color: var(--accent-orange);
+  border-color: rgba(255, 69, 0, 0.3);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px 20px;
+    font-size: 0.82rem;
+    width: 100%;
+    justify-content: center;
+  }
+}
