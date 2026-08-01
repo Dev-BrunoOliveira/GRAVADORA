@@ -58,10 +58,8 @@ export const Hero: React.FC<HeroProps> = ({
             }}
           >
             Somos a{" "}
-            <strong style={{ color: "var(--text-main)" }}>GoudContent</strong>:
-            produtora audiovisual focada em capturar a alta velocidade, estética
-            urbana/outdoor e produtos esportivos para marcas de alta
-            performance.
+            <strong style={{ color: "var(--text-main)" }}>GoudContent</strong> :
+            A combinação perfeita entre velocidade, flexibilidade e audiovisual para elevar sua marca.
           </p>
 
           {/* CTA BUTTONS */}
