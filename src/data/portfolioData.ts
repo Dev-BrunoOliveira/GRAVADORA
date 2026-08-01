@@ -4,7 +4,7 @@ export const PORTFOLIO_PROJECTS: VideoProject[] = [
   {
     id: 'goud-official-showreel',
     title: 'GoudContent Showreel: Movimento & Performance',
-    client: 'GoudContent Sports Video House',
+    client: 'GoudContent Produtora',
     category: 'outdoor',
     categoryLabel: 'Showreel Oficial',
     thumbnailUrl: 'https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1200&q=80',

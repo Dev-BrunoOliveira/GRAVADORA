@@ -209,7 +209,7 @@ export const ContactFooter: React.FC = () => {
           </div>
 
           <p style={{ fontSize: '0.82rem', color: 'var(--text-dim)' }}>
-            © {new Date().getFullYear()} GoudContent Sports Video House. Todos os direitos reservados.
+            © {new Date().getFullYear()} GoudContent Produtora. Todos os direitos reservados.
           </p>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>

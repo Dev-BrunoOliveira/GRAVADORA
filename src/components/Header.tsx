@@ -70,7 +70,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimator, theme, onToggle
               />
             </div>
             <span style={{ fontSize: '0.68rem', letterSpacing: '2.5px', textTransform: 'uppercase', color: 'var(--text-muted)', display: 'block', marginTop: '-2px' }}>
-              SPORTS VIDEO HOUSE
+              PRODUTORA AUDIOVISUAL
             </span>
           </div>
         </a>

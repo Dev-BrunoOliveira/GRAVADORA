@@ -42,8 +42,8 @@ export const Hero: React.FC<HeroProps> = ({
               marginBottom: "24px",
             }}
           >
-            MOVIMENTO EM CADA FRAME{" "}
-            <span className="text-gradient-yellow">ENERGIA NA TELA</span>
+            CRIAMOS CONEXÕES ATRAVÉS{" "}
+            <span className="text-gradient-yellow">DO AUDIOVISUAL</span>
           </h1>
 
           {/* SUBTITLE */}
@@ -144,12 +144,12 @@ export const Hero: React.FC<HeroProps> = ({
                     fontWeight: 800,
                   }}
                 >
-                  6K RAW & 4K Cinema
+                  Expereiência 4K Cinema
                 </span>
                 <span
                   style={{ fontSize: "0.73rem", color: "var(--text-muted)" }}
                 >
-                  Sensores RED & Sony FX
+                  Qualidade cinematográfica em cada frame
                 </span>
               </div>
             </div>

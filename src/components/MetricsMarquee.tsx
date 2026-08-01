@@ -3,7 +3,7 @@ import { AGENCY_METRICS } from "../data/gearData";
 
 export const MetricsMarquee: React.FC = () => {
   const marqueeItems = [
-    "COBERTURA DE GRANDES EVENTOS",
+    "CONTEÚDO ESTRATÉGICO",
     "MARCAS DE PERFORMANCE",
     "EVENTOS PRIVADOS",
     "FPV AERIAL TRACKING",
