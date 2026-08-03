@@ -177,11 +177,11 @@ export const BudgetSlider: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
-              style={{ width: '100%', justifyContent: 'center', padding: '16px 28px', fontSize: '1rem' }}
+              style={{ width: '100%', justifyContent: 'center' }}
             >
-              <MessageSquare style={{ width: '20px', height: '20px', fill: '#FFFFFF' }} />
-              Fechar Este Orçamento no WhatsApp (+55 11 985187954)
-              <ArrowRight style={{ width: '18px', height: '18px' }} />
+              <MessageSquare style={{ width: '18px', height: '18px', fill: '#FFFFFF', flexShrink: 0 }} />
+              <span>Fechar Orçamento no WhatsApp</span>
+              <ArrowRight style={{ width: '18px', height: '18px', flexShrink: 0 }} />
             </a>
           </div>
 

@@ -102,8 +102,8 @@ export const ContactFooter: React.FC = () => {
               className="btn-primary"
               style={{ display: 'inline-flex', alignItems: 'center', gap: '10px' }}
             >
-              <MessageSquare style={{ width: '18px', height: '18px', fill: '#FFFFFF' }} />
-              Chamar no WhatsApp (+55 11 985187954)
+              <MessageSquare style={{ width: '18px', height: '18px', fill: '#FFFFFF', flexShrink: 0 }} />
+              <span>Chamar no WhatsApp</span>
             </a>
           </div>
 
