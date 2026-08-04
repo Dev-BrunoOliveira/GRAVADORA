@@ -20,6 +20,15 @@ export const PORTFOLIO_PROJECTS: VideoProject[] = [
     videoUrl: '/look.MOV',
     description: 'Produção audiovisual mobile em formato vertical (9:16), pronta para exibição.',
   },
+   {
+    id: 'video-look-3',
+    title: 'Look Film #3',
+    client: 'GoudContent',
+    aspectRatio: '9/16', // Formato vertical mobile (9:16)
+    thumbnailUrl: '/LeblonJames.jfif',
+    videoUrl: '/look.MOV',
+    description: 'Produção audiovisual mobile em formato vertical (9:16), pronta para exibição.',
+  },
   {
     id: 'video-showreel-run',
     title: 'GoudContent Showreel',
