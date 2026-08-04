@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, Phone, Mail, MapPin, Video, Globe, CheckCircle2, MessageSquare, Radio } from 'lucide-react';
+import { Send, Phone, Mail, MapPin, CheckCircle2, MessageSquare, Radio } from 'lucide-react';
 
 export const ContactFooter: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -212,14 +212,7 @@ export const ContactFooter: React.FC = () => {
             © {new Date().getFullYear()} GoudContent Produtora. Todos os direitos reservados.
           </p>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <a href="https://vimeo.com" target="_blank" rel="noreferrer" style={socialIconStyle} title="Vimeo Pro">
-              <Video style={{ width: '18px', height: '18px' }} />
-            </a>
-            <a href="https://goudcontent.com.br" target="_blank" rel="noreferrer" style={socialIconStyle} title="Website Oficial">
-              <Globe style={{ width: '18px', height: '18px' }} />
-            </a>
-          </div>
+
         </div>
 
       </div>

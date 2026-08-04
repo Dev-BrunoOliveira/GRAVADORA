@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { PORTFOLIO_PROJECTS } from '../data/portfolioData';
 import type { VideoProject } from '../types';
-import { Play, Clock, Layers } from 'lucide-react';
+import { Play, Clock, Layers, ChevronDown, ChevronUp } from 'lucide-react';
 
 interface PortfolioShowcaseProps {
   onSelectProject: (project: VideoProject) => void;
 }
 
 export const PortfolioShowcase: React.FC<PortfolioShowcaseProps> = ({ onSelectProject }) => {
+  const [isMobile, setIsMobile] = useState<boolean>(() =>
+    typeof window !== 'undefined' ? window.innerWidth <= 768 : false
+  );
+  const [showAllMobile, setShowAllMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const visibleProjects = isMobile && !showAllMobile
+    ? PORTFOLIO_PROJECTS.slice(0, 3)
+    : PORTFOLIO_PROJECTS;
+
   return (
     <section id="portfolio" style={{ padding: '100px 0', backgroundColor: 'var(--bg-primary)', position: 'relative' }}>
       <div className="container">
@@ -28,7 +46,7 @@ export const PortfolioShowcase: React.FC<PortfolioShowcaseProps> = ({ onSelectPr
 
         {/* PROJECTS GRID */}
         <div className="portfolio-grid">
-          {PORTFOLIO_PROJECTS.map((project) => {
+          {visibleProjects.map((project) => {
             const isVertical = project.aspectRatio === '9/16' || project.aspectRatio === 'vertical' || project.orientation === 'vertical';
             return (
               <div
@@ -159,6 +177,38 @@ export const PortfolioShowcase: React.FC<PortfolioShowcaseProps> = ({ onSelectPr
             );
           })}
         </div>
+
+        {/* MOBILE SHOW MORE / SHOW LESS BUTTON */}
+        {isMobile && PORTFOLIO_PROJECTS.length > 3 && (
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '36px' }}>
+            <button
+              onClick={() => setShowAllMobile((prev) => !prev)}
+              className="btn-secondary"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '10px',
+                padding: '14px 28px',
+                borderRadius: 'var(--radius-full)',
+                border: '1px solid var(--accent-yellow)',
+                color: 'var(--accent-yellow)',
+                background: 'rgba(255, 199, 0, 0.08)',
+                cursor: 'pointer',
+                fontSize: '0.9rem',
+                fontWeight: 700,
+                transition: 'all 0.3s ease',
+                width: 'auto'
+              }}
+            >
+              <span>{showAllMobile ? 'Ver menos projetos' : 'Ver mais projetos'}</span>
+              {showAllMobile ? (
+                <ChevronUp style={{ width: '18px', height: '18px' }} />
+              ) : (
+                <ChevronDown style={{ width: '18px', height: '18px' }} />
+              )}
+            </button>
+          </div>
+        )}
 
       </div>
     </section>
