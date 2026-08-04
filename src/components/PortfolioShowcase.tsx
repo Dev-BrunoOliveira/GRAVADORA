@@ -27,21 +27,14 @@ export const PortfolioShowcase: React.FC<PortfolioShowcaseProps> = ({ onSelectPr
         </div>
 
         {/* PROJECTS GRID */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-            gap: '32px',
-            alignItems: 'start'
-          }}
-        >
+        <div className="portfolio-grid">
           {PORTFOLIO_PROJECTS.map((project) => {
             const isVertical = project.aspectRatio === '9/16' || project.aspectRatio === 'vertical' || project.orientation === 'vertical';
             return (
               <div
                 key={project.id}
                 onClick={() => onSelectProject(project)}
-                className="glass-panel"
+                className={`glass-panel ${isVertical ? 'portfolio-card-vertical' : 'portfolio-card-horizontal'}`}
                 style={{
                   cursor: 'pointer',
                   borderRadius: 'var(--radius-lg)',
@@ -57,7 +50,6 @@ export const PortfolioShowcase: React.FC<PortfolioShowcaseProps> = ({ onSelectPr
                     position: 'relative',
                     width: '100%',
                     aspectRatio: isVertical ? '9 / 16' : '16 / 9',
-                    maxHeight: isVertical ? '480px' : 'none',
                     overflow: 'hidden'
                   }}
                 >
