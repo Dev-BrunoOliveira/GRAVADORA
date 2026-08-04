@@ -2,23 +2,22 @@ import type { VideoProject } from '../types';
 
 export const PORTFOLIO_PROJECTS: VideoProject[] = [
   {
-    id: 'goud-official-showreel',
-    title: 'GoudContent Showreel: Movimento & Performance',
+    id: 'video-look-mov',
+    title: 'Look Film',
+    client: 'GoudContent',
+    aspectRatio: '9/16', // Formato vertical mobile (9:16) para vídeos de celular
+    thumbnailUrl: '/LeblonJames.jfif',
+    videoUrl: '/look.MOV', // Arquivo look.MOV na pasta public
+    description: 'Produção audiovisual mobile em formato vertical (9:16), pronta para exibição.',
+    featured: true,
+  },
+  {
+    id: 'video-showreel-run',
+    title: 'GoudContent Showreel',
     client: 'GoudContent Produtora',
-    category: 'outdoor',
-    categoryLabel: 'Showreel Oficial',
+    aspectRatio: '16/9', // Horizontal 16:9
     thumbnailUrl: 'https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1200&q=80',
     videoUrl: '/run.mp4',
-    duration: '1:30',
-    resolution: '4K Cinema',
-    fps: '240 FPS Slow-Mo',
-    gearUsed: ['RED V-Raptor 8K', 'FPV CineWhoop Drone', 'Gimbal DJI RS3 Pro'],
-    description: 'Filme institucional capturando a essência de velocidade, atletas de alta resistência e equipamentos esportivos em ação.',
-    featured: true,
-    metrics: {
-      views: '2.5M+',
-      engagement: '14.8%',
-      productionDays: '3 dias'
-    }
+    description: 'Filme institucional capturando a essência de velocidade e movimento.',
   }
 ];

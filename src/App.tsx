@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { MetricsMarquee } from './components/MetricsMarquee';
+import { PortfolioShowcase } from './components/PortfolioShowcase';
 import { KineticScrollSection } from './components/KineticScrollSection';
 import { BudgetSlider } from './components/BudgetSlider';
 import { ContactFooter } from './components/ContactFooter';
 import { VideoModal } from './components/VideoModal';
 
-import { PORTFOLIO_PROJECTS } from './data/portfolioData';
 import type { VideoProject } from './types';
 
 export function App() {
@@ -22,9 +22,11 @@ export function App() {
     setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
   };
 
-  const handlePlayFeatured = () => {
-    const featured = PORTFOLIO_PROJECTS.find(p => p.featured) || PORTFOLIO_PROJECTS[0];
-    setSelectedProject(featured);
+  const handleOpenPortfolio = () => {
+    const element = document.getElementById('portfolio');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const handleOpenEstimator = () => {
@@ -43,16 +45,19 @@ export function App() {
         onToggleTheme={toggleTheme}
       />
 
-      {/* HERO SECTION WITH RUN.MP4 BACKGROUND */}
+      {/* HERO SECTION */}
       <Hero
-        onPlayFeatured={handlePlayFeatured}
+        onOpenPortfolio={handleOpenPortfolio}
         onOpenEstimator={handleOpenEstimator}
       />
 
       {/* METRICS & MARQUEE */}
       <MetricsMarquee />
 
-      {/* KINETIC SCROLL SECTION (CONTROLADO PELO SCROLL DO USUÁRIO COM RUN.MP4) */}
+      {/* PORTFOLIO SHOWCASE SECTION WITH VIDEOS */}
+      <PortfolioShowcase onSelectProject={setSelectedProject} />
+
+      {/* KINETIC SCROLL SECTION */}
       <KineticScrollSection />
 
       {/* SLIDER DE ORÇAMENTO COM DIRECIONAMENTO PARA WHATSAPP (+55 11 985187954) */}

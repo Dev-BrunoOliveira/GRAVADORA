@@ -2,12 +2,12 @@ import React from "react";
 import { Play, ArrowRight, ShieldCheck, Zap, Video } from "lucide-react";
 
 interface HeroProps {
-  onPlayFeatured: () => void;
+  onOpenPortfolio: () => void;
   onOpenEstimator: () => void;
 }
 
 export const Hero: React.FC<HeroProps> = ({
-  onPlayFeatured,
+  onOpenPortfolio,
   onOpenEstimator,
 }) => {
   return (
@@ -73,11 +73,11 @@ export const Hero: React.FC<HeroProps> = ({
               marginBottom: "50px",
             }}
           >
-            <button onClick={onPlayFeatured} className="btn-primary">
+            <button onClick={onOpenPortfolio} className="btn-primary">
               <Play
                 style={{ width: "18px", height: "18px", fill: "#FFFFFF" }}
               />
-              Ver Showreel 2026
+              Ver Portfólio
             </button>
             <button onClick={onOpenEstimator} className="btn-secondary">
               Simular Orçamento

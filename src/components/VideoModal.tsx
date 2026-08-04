@@ -11,6 +11,8 @@ interface VideoModalProps {
 export const VideoModal: React.FC<VideoModalProps> = ({ project, onClose, onOpenEstimator }) => {
   if (!project) return null;
 
+  const isVertical = project.aspectRatio === '9/16' || project.aspectRatio === 'vertical' || project.orientation === 'vertical';
+
   return (
     <div
       style={{
@@ -30,7 +32,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({ project, onClose, onOpen
         style={{
           position: 'relative',
           width: '100%',
-          maxWidth: '1100px',
+          maxWidth: isVertical ? '820px' : '1100px',
           maxHeight: '90vh',
           backgroundColor: 'var(--bg-surface)',
           borderRadius: 'var(--radius-lg)',
@@ -38,7 +40,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({ project, onClose, onOpen
           boxShadow: '0 25px 60px rgba(0, 0, 0, 0.9)',
           overflow: 'hidden',
           display: 'grid',
-          gridTemplateColumns: 'minmax(0, 2fr) minmax(300px, 1fr)',
+          gridTemplateColumns: isVertical ? 'minmax(250px, 1fr) minmax(280px, 1fr)' : 'minmax(0, 2fr) minmax(300px, 1fr)',
           animation: 'floatSlow 0.3s ease-out'
         }}
         onClick={(e) => e.stopPropagation()}
@@ -76,7 +78,8 @@ export const VideoModal: React.FC<VideoModalProps> = ({ project, onClose, onOpen
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            position: 'relative'
+            position: 'relative',
+            padding: isVertical ? '20px' : '0'
           }}
         >
           <video
@@ -84,7 +87,14 @@ export const VideoModal: React.FC<VideoModalProps> = ({ project, onClose, onOpen
             controls
             autoPlay
             playsInline
-            style={{ width: '100%', height: '100%', maxHeight: '70vh', objectFit: 'contain' }}
+            style={{
+              width: '100%',
+              height: '100%',
+              maxHeight: isVertical ? '76vh' : '70vh',
+              objectFit: 'contain',
+              borderRadius: isVertical ? '16px' : '0',
+              boxShadow: isVertical ? '0 10px 30px rgba(0,0,0,0.8)' : 'none'
+            }}
           />
         </div>
 
@@ -101,8 +111,8 @@ export const VideoModal: React.FC<VideoModalProps> = ({ project, onClose, onOpen
         >
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-              <span className="badge-tag">{project.categoryLabel}</span>
-              <span className="badge-tag badge-orange">{project.fps}</span>
+              {project.categoryLabel && <span className="badge-tag">{project.categoryLabel}</span>}
+              {project.fps && <span className="badge-tag badge-orange">{project.fps}</span>}
             </div>
 
             <span style={{ fontSize: '0.85rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px', color: 'var(--accent-yellow)' }}>
@@ -117,47 +127,23 @@ export const VideoModal: React.FC<VideoModalProps> = ({ project, onClose, onOpen
               {project.description}
             </p>
 
-            {/* METRICS ROW */}
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(3, 1fr)',
-                gap: '12px',
-                padding: '16px',
-                borderRadius: 'var(--radius-md)',
-                backgroundColor: 'var(--bg-card)',
-                marginBottom: '24px'
-              }}
-            >
-              <div>
-                <span style={{ fontSize: '0.7rem', color: 'var(--text-dim)', textTransform: 'uppercase', display: 'block' }}>Views</span>
-                <strong style={{ fontSize: '1.1rem', color: 'var(--text-main)' }}>{project.metrics.views}</strong>
-              </div>
-              <div>
-                <span style={{ fontSize: '0.7rem', color: 'var(--text-dim)', textTransform: 'uppercase', display: 'block' }}>Engajamento</span>
-                <strong style={{ fontSize: '1.1rem', color: 'var(--accent-yellow)' }}>{project.metrics.engagement}</strong>
-              </div>
-              <div>
-                <span style={{ fontSize: '0.7rem', color: 'var(--text-dim)', textTransform: 'uppercase', display: 'block' }}>Tempo Captação</span>
-                <strong style={{ fontSize: '1.1rem', color: 'var(--accent-orange)' }}>{project.metrics.productionDays}</strong>
-              </div>
-            </div>
-
             {/* GEAR LIST */}
-            <div style={{ marginBottom: '24px' }}>
-              <h4 style={{ fontSize: '0.82rem', textTransform: 'uppercase', letterSpacing: '1px', color: 'var(--text-muted)', marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                <Camera style={{ width: '14px', height: '14px', color: 'var(--accent-yellow)' }} />
-                Equipamentos Utilizados:
-              </h4>
-              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                {project.gearUsed.map((gear, idx) => (
-                  <li key={idx} style={{ fontSize: '0.85rem', color: 'var(--text-main)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <CheckCircle2 style={{ width: '14px', height: '14px', color: 'var(--accent-yellow)' }} />
-                    {gear}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {project.gearUsed && project.gearUsed.length > 0 && (
+              <div style={{ marginBottom: '24px' }}>
+                <h4 style={{ fontSize: '0.82rem', textTransform: 'uppercase', letterSpacing: '1px', color: 'var(--text-muted)', marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <Camera style={{ width: '14px', height: '14px', color: 'var(--accent-yellow)' }} />
+                  Equipamentos Utilizados:
+                </h4>
+                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  {project.gearUsed.map((gear, idx) => (
+                    <li key={idx} style={{ fontSize: '0.85rem', color: 'var(--text-main)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <CheckCircle2 style={{ width: '14px', height: '14px', color: 'var(--accent-yellow)' }} />
+                      {gear}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
 
           {/* CTA */}

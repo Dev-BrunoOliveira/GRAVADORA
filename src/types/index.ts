@@ -4,20 +4,22 @@ export interface VideoProject {
   id: string;
   title: string;
   client: string;
-  category: Exclude<CategoryType, 'all'>;
-  categoryLabel: string;
+  category?: Exclude<CategoryType, 'all'>;
+  categoryLabel?: string;
   thumbnailUrl: string;
   videoUrl: string;
-  duration: string;
-  resolution: string;
-  fps: string;
-  gearUsed: string[];
+  aspectRatio?: '9/16' | '16/9' | 'vertical' | 'horizontal' | string;
+  orientation?: 'vertical' | 'horizontal';
+  duration?: string;
+  resolution?: string;
+  fps?: string;
+  gearUsed?: string[];
   description: string;
   featured?: boolean;
-  metrics: {
-    views: string;
-    engagement: string;
-    productionDays: string;
+  metrics?: {
+    views?: string;
+    engagement?: string;
+    productionDays?: string;
   };
 }
 

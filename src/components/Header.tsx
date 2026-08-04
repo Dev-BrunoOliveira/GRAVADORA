@@ -77,6 +77,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimator, theme, onToggle
 
         {/* DESKTOP NAV */}
         <nav style={{ display: 'flex', alignItems: 'center', gap: '36px' }} className="desktop-only">
+          <a href="#portfolio" style={navLinkStyle}>Portfólio</a>
           <a href="#orcamento-slider" style={navLinkStyle}>Simular Orçamento</a>
           <a href="#contato" style={navLinkStyle}>Contato</a>
         </nav>
@@ -149,6 +150,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimator, theme, onToggle
             gap: '18px'
           }}
         >
+          <a href="#portfolio" onClick={() => setMobileMenuOpen(false)} style={mobileNavLinkStyle}>Portfólio</a>
           <a href="#orcamento-slider" onClick={() => setMobileMenuOpen(false)} style={mobileNavLinkStyle}>Simular Orçamento</a>
           <a href="#contato" onClick={() => setMobileMenuOpen(false)} style={mobileNavLinkStyle}>Contato & WhatsApp</a>
           
