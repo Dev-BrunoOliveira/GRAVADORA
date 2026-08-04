@@ -180,7 +180,7 @@ export const ContactFooter: React.FC = () => {
 
         </div>
 
-        {/* BOTTOM BRAND FOOTER */}
+        {}
         <div
           style={{
             borderTop: '1px solid var(--border-subtle)',
@@ -264,16 +264,4 @@ const inputStyle: React.CSSProperties = {
   fontFamily: 'var(--font-main)'
 };
 
-const socialIconStyle: React.CSSProperties = {
-  width: '38px',
-  height: '38px',
-  borderRadius: '50%',
-  backgroundColor: 'var(--bg-card)',
-  border: '1px solid var(--border-subtle)',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  color: 'var(--text-main)',
-  textDecoration: 'none',
-  transition: 'all 0.2s ease'
-};
+
