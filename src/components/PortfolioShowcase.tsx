@@ -159,7 +159,7 @@ export const PortfolioShowcase: React.FC<PortfolioShowcaseProps> = ({ onSelectPr
                 </div>
 
               {/* CARD DETAILS */}
-              <div style={{ padding: '24px', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div className="portfolio-card-details" style={{ padding: '24px', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <div>
                   <span style={{ fontSize: '0.78rem', fontWeight: 800, letterSpacing: '1px', textTransform: 'uppercase', color: 'var(--accent-yellow)', display: 'block', marginBottom: '6px' }}>
                     {project.client}

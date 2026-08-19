@@ -48,17 +48,11 @@ export const Testimonials: React.FC = () => {
         </div>
 
         {/* REVIEWS GRID */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '32px'
-          }}
-        >
+        <div className="testimonials-grid">
           {reviews.map((rev, idx) => (
             <div
               key={idx}
-              className="glass-panel"
+              className="glass-panel testimonial-card"
               style={{
                 padding: '36px 28px',
                 borderRadius: 'var(--radius-lg)',

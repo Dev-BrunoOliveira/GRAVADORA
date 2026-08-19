@@ -22,17 +22,11 @@ export const TechGear: React.FC = () => {
         </div>
 
         {/* GEAR GRID */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '32px'
-          }}
-        >
+        <div className="gear-grid">
           {TECH_GEAR.map((item) => (
             <div
               key={item.id}
-              className="glass-panel"
+              className="glass-panel gear-card"
               style={{
                 borderRadius: 'var(--radius-lg)',
                 overflow: 'hidden',
@@ -42,6 +36,7 @@ export const TechGear: React.FC = () => {
             >
               {/* IMAGE HEADER */}
               <div
+                className="gear-card-image"
                 style={{
                   position: 'relative',
                   width: '100%',
@@ -86,7 +81,7 @@ export const TechGear: React.FC = () => {
               </div>
 
               {/* DETAILS */}
-              <div style={{ padding: '24px', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div className="gear-card-body" style={{ padding: '24px', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <div>
                   <span style={{ fontSize: '0.78rem', color: 'var(--accent-orange)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '6px' }}>
                     {item.category}

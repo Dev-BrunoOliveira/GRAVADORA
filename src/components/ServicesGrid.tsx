@@ -34,17 +34,11 @@ export const ServicesGrid: React.FC<ServicesGridProps> = ({ onOpenEstimator }) =
         </div>
 
         {/* SERVICES GRID */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '32px'
-          }}
-        >
+        <div className="services-grid">
           {SERVICES_LIST.map((service) => (
             <div
               key={service.id}
-              className="glass-panel"
+              className="glass-panel service-card"
               style={{
                 padding: '36px 28px',
                 borderRadius: 'var(--radius-lg)',
@@ -58,6 +52,7 @@ export const ServicesGrid: React.FC<ServicesGridProps> = ({ onOpenEstimator }) =
                 {/* ICON & TAG */}
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '24px' }}>
                   <div
+                    className="service-icon-box"
                     style={{
                       width: '60px',
                       height: '60px',

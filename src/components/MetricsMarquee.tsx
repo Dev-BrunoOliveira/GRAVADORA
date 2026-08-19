@@ -61,17 +61,11 @@ export const MetricsMarquee: React.FC = () => {
 
       {/* METRICS GRID */}
       <div className="container">
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-            gap: "24px",
-          }}
-        >
+        <div className="metrics-grid">
           {AGENCY_METRICS.map((metric, idx) => (
             <div
               key={idx}
-              className="glass-panel"
+              className="glass-panel metric-card"
               style={{
                 padding: "32px 24px",
                 position: "relative",
@@ -95,7 +89,7 @@ export const MetricsMarquee: React.FC = () => {
                 }}
               />
               <div
-                className="font-display"
+                className="font-display metric-value"
                 style={{
                   fontSize: "3.2rem",
                   fontWeight: 900,
@@ -110,6 +104,7 @@ export const MetricsMarquee: React.FC = () => {
                 {metric.value}
                 {metric.unit && (
                   <span
+                    className="metric-unit"
                     style={{
                       fontSize: "1.2rem",
                       fontWeight: 700,
@@ -122,6 +117,7 @@ export const MetricsMarquee: React.FC = () => {
                 )}
               </div>
               <h3
+                className="metric-label"
                 style={{
                   fontSize: "1.1rem",
                   fontWeight: 800,
@@ -132,6 +128,7 @@ export const MetricsMarquee: React.FC = () => {
                 {metric.label}
               </h3>
               <p
+                className="metric-desc"
                 style={{
                   fontSize: "0.85rem",
                   color: "var(--text-muted)",
