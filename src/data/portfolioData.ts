@@ -3,7 +3,7 @@ import type { VideoProject } from '../types';
 export const PORTFOLIO_PROJECTS: VideoProject[] = [
   {
     id: 'video-look-1',
-    title: 'Teste 1',
+    title: 'Leblon',
     client: 'GoudContent',
     aspectRatio: '9/16', // Formato vertical mobile (9:16)
     thumbnailUrl: '/LeblonJames.jfif',
@@ -13,7 +13,7 @@ export const PORTFOLIO_PROJECTS: VideoProject[] = [
   },
   {
     id: 'video-look-2',
-    title: 'Teste 2',
+    title: 'Curry',
     client: 'GoudContent',
     aspectRatio: '9/16', // Formato vertical mobile (9:16)
     thumbnailUrl: '/Curry.jpg',
@@ -22,7 +22,7 @@ export const PORTFOLIO_PROJECTS: VideoProject[] = [
   },
    {
     id: 'video-look-3',
-    title: 'Teste 3',
+    title: 'Jordan',
     client: 'GoudContent',
     aspectRatio: '9/16', // Formato vertical mobile (9:16)
     thumbnailUrl: '/Jordan.jpg',
@@ -31,7 +31,7 @@ export const PORTFOLIO_PROJECTS: VideoProject[] = [
   },
   {
     id: 'video-showreel-run-1',
-    title: 'GoudContent Showreel #1',
+    title: 'Video Horizontal 1',
     client: 'GoudContent Produtora',
     aspectRatio: '16/9', // Formato horizontal (16:9)
     thumbnailUrl: 'https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1200&q=80',
@@ -40,7 +40,7 @@ export const PORTFOLIO_PROJECTS: VideoProject[] = [
   },
   {
     id: 'video-showreel-run-2',
-    title: 'GoudContent Showreel #2',
+    title: 'Video Horizontal 2',
     client: 'GoudContent Produtora',
     aspectRatio: '16/9', // Formato horizontal (16:9)
     thumbnailUrl: 'https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1200&q=80',
@@ -49,7 +49,7 @@ export const PORTFOLIO_PROJECTS: VideoProject[] = [
   },
   {
     id: 'video-showreel-run-3',
-    title: 'GoudContent Showreel #3',
+    title: 'Video Horizontal 3',
     client: 'GoudContent Produtora',
     aspectRatio: '16/9', // Formato horizontal (16:9)
     thumbnailUrl: 'https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1200&q=80',
