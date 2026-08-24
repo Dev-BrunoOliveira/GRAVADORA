@@ -54,7 +54,7 @@ export const AGENCY_METRICS: MetricItem[] = [
   },
   {
     label: 'Campanhas Gravadas',
-    value: '85+',
+    value: '140+',
     unit: 'projetos',
     description: 'Para grandes marcas de vestuário e equipamentos esportivos.'
   },
@@ -62,6 +62,6 @@ export const AGENCY_METRICS: MetricItem[] = [
     label: 'Alcance de Visualizações',
     value: '25M+',
     unit: 'views',
-    description: 'Gerados nas redes sociais e comerciais de TV dos nossos clientes.'
+    description: 'Gerados nas redes sociais em real time, com engajamento orgânico.'
   }
 ];
