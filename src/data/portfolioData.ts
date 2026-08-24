@@ -31,7 +31,7 @@ export const PORTFOLIO_PROJECTS: VideoProject[] = [
   },
   {
     id: 'video-showreel-run-1',
-    title: 'Video Horizontal 1',
+    title: 'Modo Horizontal',
     client: 'GoudContent Produtora',
     aspectRatio: '16/9', // Formato horizontal (16:9)
     thumbnailUrl: 'https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1200&q=80',
