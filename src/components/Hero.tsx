@@ -115,12 +115,12 @@ export const Hero: React.FC<HeroProps> = ({
                     fontWeight: 800,
                   }}
                 >
-                  240 FPS Super Slow
+                  Real Time 4K 240fps
                 </span>
                 <span
                   style={{ fontSize: "0.73rem", color: "var(--text-muted)" }}
                 >
-                  Detalhamento ultra slow
+                  Oferecemos uma experiência de transmissão em tempo real para eventos e shows
                 </span>
               </div>
             </div>
@@ -142,12 +142,12 @@ export const Hero: React.FC<HeroProps> = ({
                     fontWeight: 800,
                   }}
                 >
-                  Expereiência 4K Cinema
+                  Profissionais qualificados
                 </span>
                 <span
                   style={{ fontSize: "0.73rem", color: "var(--text-muted)" }}
                 >
-                  Qualidade cinematográfica em cada frame
+                  Seleção dos melhores profissionais de audiovisual para cada projeto
                 </span>
               </div>
             </div>

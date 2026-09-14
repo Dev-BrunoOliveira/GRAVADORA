@@ -47,10 +47,10 @@ export const AGENCY_METRICS: MetricItem[] = [
     description: 'Percorridos em montanhas, pistas e estúdios gravando esportes.'
   },
   {
-    label: 'Taxa de FPS Máxima',
+    label: 'Real Time em eventos',
     value: '240',
     unit: 'fps',
-    description: 'Super Câmera Lenta em 4K nativo para análise dramática de cena.'
+    description: 'Entregamos a melhor experiência de transmissão em tempo real para eventos e shows.'
   },
   {
     label: 'Campanhas Gravadas',
