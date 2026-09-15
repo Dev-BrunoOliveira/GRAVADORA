@@ -169,12 +169,12 @@ export const Hero: React.FC<HeroProps> = ({
                     fontWeight: 800,
                   }}
                 >
-                  FPV Drone Tracking
+                  Piloto de Drone FPV
                 </span>
                 <span
                   style={{ fontSize: "0.73rem", color: "var(--text-muted)" }}
                 >
-                  Captação até 140km/h
+                  Captação até 120km/h
                 </span>
               </div>
             </div>
