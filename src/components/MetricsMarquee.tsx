@@ -59,7 +59,7 @@ export const MetricsMarquee: React.FC = () => {
         </div>
       </div>
 
-      {/* METRICS GRID */}
+      {}
       <div className="container">
         <div className="metrics-grid">
           {AGENCY_METRICS.map((metric, idx) => (

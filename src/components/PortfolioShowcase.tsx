@@ -30,7 +30,7 @@ export const PortfolioShowcase: React.FC<PortfolioShowcaseProps> = ({ onSelectPr
     <section id="portfolio" style={{ padding: '100px 0', backgroundColor: 'var(--bg-primary)', position: 'relative' }}>
       <div className="container">
         
-        {/* SECTION HEADER */}
+        {}
         <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 50px auto' }}>
           <div className="badge-tag" style={{ marginBottom: '16px' }}>
             <Layers style={{ width: '14px', height: '14px' }} />
@@ -44,7 +44,7 @@ export const PortfolioShowcase: React.FC<PortfolioShowcaseProps> = ({ onSelectPr
           </p>
         </div>
 
-        {/* PROJECTS GRID */}
+        {}
         <div className="portfolio-grid">
           {visibleProjects.map((project) => {
             const isVertical = project.aspectRatio === '9/16' || project.aspectRatio === 'vertical' || project.orientation === 'vertical';
@@ -62,7 +62,7 @@ export const PortfolioShowcase: React.FC<PortfolioShowcaseProps> = ({ onSelectPr
                   position: 'relative'
                 }}
               >
-                {/* THUMBNAIL CONTAINER WITH HOVER EFFECT */}
+                {}
                 <div
                   style={{
                     position: 'relative',
@@ -85,7 +85,7 @@ export const PortfolioShowcase: React.FC<PortfolioShowcaseProps> = ({ onSelectPr
                     onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1.0)'}
                   />
 
-                  {/* OVERLAY GRADIENT */}
+                  {}
                   <div
                     style={{
                       position: 'absolute',
@@ -97,7 +97,7 @@ export const PortfolioShowcase: React.FC<PortfolioShowcaseProps> = ({ onSelectPr
                       padding: '16px'
                     }}
                   >
-                    {/* TOP BADGES */}
+                    {}
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '8px', flexWrap: 'wrap' }}>
                       <span className="badge-tag" style={{ backgroundColor: 'rgba(0, 0, 0, 0.85)', backdropFilter: 'blur(8px)' }}>
                         {project.categoryLabel || (isVertical ? '📱 9:16 Mobile' : '🎬 16:9 Cinema')}
@@ -122,7 +122,7 @@ export const PortfolioShowcase: React.FC<PortfolioShowcaseProps> = ({ onSelectPr
                       )}
                     </div>
 
-                    {/* CENTER PLAY BUTTON WITHOUT GLOW */}
+                    {}
                     <div
                       style={{
                         alignSelf: 'center',
@@ -140,7 +140,7 @@ export const PortfolioShowcase: React.FC<PortfolioShowcaseProps> = ({ onSelectPr
                       <Play style={{ width: '22px', height: '22px', fill: '#000000', color: '#000000', marginLeft: '3px' }} />
                     </div>
 
-                    {/* BOTTOM TECH TAGS */}
+                    {}
                     {(project.resolution || project.fps) && (
                       <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                         {project.resolution && (
