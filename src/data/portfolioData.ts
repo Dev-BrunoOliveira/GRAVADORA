@@ -3,7 +3,7 @@ import type { VideoProject } from '../types';
 export const PORTFOLIO_PROJECTS: VideoProject[] = [
   {
     id: 'video-look-1',
-    title: 'Leblon',
+    title: 'King Leblon',
     client: 'GoudContent',
     aspectRatio: '9/16', // Formato vertical mobile (9:16)
     thumbnailUrl: '/LeblonJames.jfif',
@@ -13,7 +13,7 @@ export const PORTFOLIO_PROJECTS: VideoProject[] = [
   },
   {
     id: 'video-look-2',
-    title: 'Curry',
+    title: 'Stephen Curry',
     client: 'GoudContent',
     aspectRatio: '9/16', // Formato vertical mobile (9:16)
     thumbnailUrl: '/Curry.jpg',
@@ -22,7 +22,7 @@ export const PORTFOLIO_PROJECTS: VideoProject[] = [
   },
    {
     id: 'video-look-3',
-    title: 'Jordan',
+    title: 'Michael Jordan',
     client: 'GoudContent',
     aspectRatio: '9/16', // Formato vertical mobile (9:16)
     thumbnailUrl: '/Jordan.jpg',
