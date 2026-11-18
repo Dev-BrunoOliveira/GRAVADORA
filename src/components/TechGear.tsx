@@ -11,7 +11,7 @@ export const TechGear: React.FC = () => {
         <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto 60px auto' }}>
           <div className="badge-tag" style={{ marginBottom: '16px' }}>
             <Cpu style={{ width: '14px', height: '14px' }} />
-            Estúdio & Arsenais Audiovisuais
+            Estúdio & Equipamentos Audiovisuais
           </div>
           <h2 className="font-display" style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)', fontWeight: 900, marginBottom: '16px' }}>
             TECNOLOGIA DE PONTA PARA <span className="text-gradient-yellow">CENAS DE ALTA VELOCIDADE</span>

@@ -34,7 +34,6 @@ export const BudgetSlider: React.FC = () => {
         deliverables: [
           'Filme Comercial Cinema 4K/6K (90s)',
           'Captação Aérea com Drone FPV de Alta Velocidade',
-          'Super Slow-Mo 240 FPS (Sensores RED/Sony)',
           'Pack com 10 Vídeos Adaptados para Redes',
           'Casting de Atletas e Direção de Cena'
         ],
@@ -58,7 +57,7 @@ export const BudgetSlider: React.FC = () => {
         deliverables: [
           'Documentário ou Série Comercial Completa em 8K RAW',
           'Gravações em Múltiplos Estados ou Países com Logística Completa',
-          'Equipe de Cinema Completa, Pilotos FPV e Atletas Olímpicos/Pro',
+          'Equipe de Cinema Completa, Pilotos FPV e Storyboard Profissional',
           'Color Grading de Nível Hollywoodiano e Sound Design Imersivo',
           'Direitos Totais de Imagem Ilimitados e Entregáveis Customizados'
         ],
