@@ -22,7 +22,7 @@ export const BudgetSlider: React.FC = () => {
         deliverables: [
           '1 Filme Principal Hero (60s em 16:9)',
           '4 Cortes para Reels/Stories (9:16)',
-          'Captação em Ultra Câmera Lenta (120 FPS)',
+          'Captação com o máximo de qualidade',
           'Trilha Sonora Profissional Licenciada',
           'Entrega em 5 a 7 dias úteis'
         ],
@@ -43,11 +43,11 @@ export const BudgetSlider: React.FC = () => {
       return {
         title: 'Campanha Nacional Multi-Plataforma',
         deliverables: [
-          'Filme Comercial Master Cinema 8K RAW (120s)',
+          'Filme Comercial Master Cinema 4K RAW (120s)',
           '15+ Recortes Multi-Formato (16:9, 9:16, 1:1, 4:5)',
           'Equipe de Multi-Câmeras e Drones FPV Simultâneos',
           'Sound Design Imersivo & Foley de Alta Precisão',
-          'Locações Exclusivas e Casting Profissional'
+          'Locações Exclusivas e Casting Selecionado'
         ],
         idealFor: 'Grandes veiculações em TV, Cinema, Out of Home e Redes Globais.'
       };
